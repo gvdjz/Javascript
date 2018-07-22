@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>YDiner</title>
+    <link rel="icon" href="./public/assets/favicon.iso" type="image/ico">
+</head>
+
+<body>
+    <section class="header center center">
+        <div class="row">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link display-4 " href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link display-4" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link display-4" href="#">About</a>
+                </li>
+            </ul>
+
+            <!-- <ul class="nav">
+                <li class="nav-item">
+                    <button type="submit" class="btn-facebook">fb</button>
+                </li>
+                <li class="nav-item">
+                    <button type="submit" class="btn-instagram">ig</button>
+                </li>
+                <li class="nav-item">
+                    <button type="submit" class="btn-twitter">tweet</button>
+                </li>
+            </ul> -->
+        </div>
+        <hr class="inheader">
+        <div class="container">
+            <br>
+            <br>
+            <h1>Yukihira Diner</h1>
+            <p></p>
+            <br>
+            <br>
+        </div>
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="search" class="sr-only">Search</label>
+                <input type="text" class="form-control form-control-lg transparent-input" id="search" placeholder="Search">
+            </div>
+            <button type="submit" id="submit" class="btn btn-success bt-lg" for="searchresult">Search</button>
+        </form>
+    </section>
+    <hr>
+
+    <div class="searchresult" id="searchresult">
+        <div class="card-deck"></div>
+    </div>
+
+    <h3>Top Collections</h3>
+    <div class="card-columns"> </div>
+
+    <h3>My Collections</h3>
+    <div id="collection" class="row"></div>
+
+</body>
+
+</html>

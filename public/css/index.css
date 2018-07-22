@@ -1,0 +1,75 @@
+@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import 'https://fonts.googleapis.com/css?family=Merienda';
+@import 'https://fonts.googleapis.com/css?family=Abril+Fatface';
+
+html,body{
+    background-image: url("../assets/bodyCover.jpg");
+    background-size: cover;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+.header {
+    background-image: url("../assets/sectionCover.jpg");
+    background-size: cover;
+    width: 100%;
+    height:100%;
+}
+.container {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 7px black; 
+    font-family: 'Merienda', cursive;
+}
+.nav-link {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+.nav-link:hover{
+    font-family: 'Merienda', cursive;
+    
+}
+hr.inheader {
+    margin-top: 0rem;
+    border-color: rgb(237, 243, 240);
+}
+.form-inline {
+    display: flex;
+    justify-content: center;
+}
+.form-group {
+    width: 50%;
+}
+.form-control.form-control-lg.transparent-input {
+    width: 99%;
+   opacity: .7;
+}
+.card-columns , h3, .card-deck{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 30px;
+    border: solid darkgrey;
+    border-width: 1px;
+}
+h3 {
+    background: #222 url('../assets/top_collection.jpg');
+    color: white;
+    font-family: 'Merienda', cursive;
+    font-weight: bold;
+    text-shadow: 2px 2px 7px black;
+}
+.plus {
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+}
+.plus:hover {
+    opacity: .8;
+}
+#collection {
+    margin: 10px;
+}
+.collection.card.col-md-2 {
+    margin: 5px;
+}
