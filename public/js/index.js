@@ -164,6 +164,9 @@ function addToCollection(id){
 function reload(){
     var getUrl = "http://localhost:3000/collections";
     myCollections.innerHTML = "";
+    const heading = document.querySelector(".collection_Heading");
+    heading.style.display = "block";
+
     fetch(getUrl)
     .then((resp)=>resp.json())
     .then(function(data){

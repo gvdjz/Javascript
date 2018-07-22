@@ -1,6 +1,7 @@
 @import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import 'https://fonts.googleapis.com/css?family=Merienda';
 @import 'https://fonts.googleapis.com/css?family=Abril+Fatface';
+@import 'https://use.fontawesome.com/releases/v5.1.0/css/all.css';
 
 html,body{
     background-image: url("../assets/bodyCover.jpg");
@@ -73,3 +74,22 @@ h3 {
 .collection.card.col-md-2 {
     margin: 5px;
 }
+.footer.col-sm-4 {
+    margin-left: 34%;
+    padding: 20px 0 0 40px; }
+
+.col-md-4.mb-md-0.mb-4 {
+  text-align: center; }
+  
+  .footer-copyright {
+    font-weight: bold;
+    color: aliceblue; }
+  
+  .page-footer {
+    background: #212529;
+    opacity: .9; }
+
+    .collection_Heading {
+    display: none;
+}    
+  
