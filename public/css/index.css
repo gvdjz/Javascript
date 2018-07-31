@@ -22,6 +22,9 @@ html,body{
     text-shadow: 2px 2px 7px black; 
     font-family: 'Merienda', cursive;
 }
+.container h1{
+    font-weight: bold;
+}
 .nav-link {
     color: white;
     font-size: 25px;
@@ -65,7 +68,19 @@ h3 {
     bottom: 30px;
     right: 10px;
 }
+.remove {
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+}
 .plus:hover {
+    border-radius: 20px;
+    background: green;
+    opacity: .8;
+}
+.remove:hover {
+    border-radius: 20px;
+    background: red;
     opacity: .8;
 }
 #collection {
@@ -91,5 +106,13 @@ h3 {
 
     .collection_Heading {
     display: none;
-}    
+}
+@media(max-width:470px)    {
+    .footer.col-sm-4 {
+        margin-left: 10%;
+        padding: 20px 0 0 40px;
+        width: fit-content; }
+      .col-md-4.mb-md-0.mb-4 {
+        width: 100px; }
+}
   
