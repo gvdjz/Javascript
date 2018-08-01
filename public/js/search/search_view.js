@@ -1,3 +1,5 @@
+import { myCollectionService } from "../mycollection/mycollection_service";
+
 let createNode = (element) => {
     return document.createElement(element); // Create the type of element you pass in the parameters
 };
@@ -13,12 +15,12 @@ export let searchView =(data) =>{
     cardDeck.innerHTML="";
     let restaurants = data.restaurants; // Get the restaurants
     return restaurants.map(function (restaurants) { // Map through the results and for each run the code below
-        let divCard = createNode('div'), //  Create the elements we need
-            img = createNode('img'),
-            divCardBody = createNode('div'),
-            h5 = createNode('h5'),
-            p = createNode('p'),
-            imgplus = createNode('img');
+        let divCard = createNode("div"), //  Create the elements we need
+            img = createNode("img"),
+            divCardBody = createNode("div"),
+            h5 = createNode("h5"),
+            p = createNode("p"),
+            imgplus = createNode("img");
         
         divCard.className = "card";
         img.className = "card-img-top";
@@ -42,7 +44,7 @@ export let searchView =(data) =>{
         append(cardDeck,divCard);
         append(searchresult, cardDeck);
         imgplus.onclick = () =>{
-            addToCollection(imgplus.id);
-        }
-    })
-}
+            myCollectionService(imgplus.id);
+        };
+    });
+};

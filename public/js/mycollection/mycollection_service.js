@@ -1,19 +1,18 @@
 import { myCollectionView } from "./mycollection_view";
 
 export const myCollectionService = (id) =>{
-    console.log("Inside click function");
-    console.log(id);
-    console.log(document.getElementById(id) + document.getElementById(id).parentElement + document.getElementById(id).parentElement.parentElement)
+    // console.log("Inside click function");
+    // console.log(id);
+    // console.log(document.getElementById(id) + document.getElementById(id).parentElement + document.getElementById(id).parentElement.parentElement);
     var div = document.getElementById(id).parentElement.parentElement.parentElement;
     var img = div.firstChild;
     var cardBody = img.nextSibling;
     var name = cardBody.firstChild;
-    var text = name.nextSibling;
     var jsonString = {
-            "id" : id,
-            "img" : img.src,
-            "name" : name.innerHTML
-    }
+        "id" : id,
+        "img" : img.src,
+        "name" : name.innerHTML
+    };
     let fetchData = { 
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, cors, *same-origin
@@ -26,14 +25,13 @@ export const myCollectionService = (id) =>{
         redirect: "follow", // manual, *follow, error
         referrer: "no-referrer", // no-referrer, *client
         body: JSON.stringify(jsonString) // body data type must match "Content-Type" header
-    }
+    };
     let addUrl = "http://localhost:3000/collections";
     
     fetch(addUrl, fetchData)
-    .then(reload());        //Adding to json-server and calling reload function
-
-    console.log(div);
-}
+        .then(reload());        //Adding to json-server and calling reload function
+    //console.log(div);
+};
 
 let reload = () =>{
     const myCollections = document.getElementById("collection");
@@ -43,14 +41,14 @@ let reload = () =>{
     heading.style.display = "block";
 
     fetch(getUrl)
-    .then((resp)=>resp.json())
-    .then((data) =>{
-        myCollectionView(data);
-    })
-    .catch((error)=> {
-        console.log(error);
-    });
-}
+        .then((resp)=>resp.json())
+        .then((data) =>{
+            myCollectionView(data);
+        })
+        .catch((error)=> {
+            console.log(error);
+        });
+};
 
 export const deleteCollectionService = (id) =>{
     let fetchData = { 
@@ -60,9 +58,9 @@ export const deleteCollectionService = (id) =>{
         credentials: "same-origin", // include, same-origin, *omit
         redirect: "follow", // manual, *follow, error
         referrer: "no-referrer", // no-referrer, *client
-    }
+    };
     let deleteUrl = "http://localhost:3000/collections/"+id;
     
     fetch(deleteUrl, fetchData)
-    .then(reload());       
-}
+        .then(reload());       
+};

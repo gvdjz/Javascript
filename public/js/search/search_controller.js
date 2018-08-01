@@ -1,3 +1,3 @@
 import { searchService } from "./search_service";
 
-document.querySelector(".form-inline").addEventListener('submit', searchService);
+document.querySelector(".form-inline").addEventListener("submit", searchService);

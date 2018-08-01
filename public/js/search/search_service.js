@@ -13,7 +13,7 @@ export let searchService = (event) => {
         const h3search = document.querySelector(".h3search");
 
         if (h3search == null) {
-            let h3 = createNode('h3');
+            let h3 = createNode("h3");
             h3.className = "h3search";
             h3.innerHTML = "Search Results";
             append(searchresult, h3);
@@ -32,7 +32,7 @@ export let searchService = (event) => {
                 console.log(error);
             });
     }
-}
+};
 
 let createNode = (element) => {
     return document.createElement(element); // Create the type of element you pass in the parameters

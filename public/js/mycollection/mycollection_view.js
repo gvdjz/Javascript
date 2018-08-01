@@ -6,16 +6,16 @@ export const myCollectionView = (data) =>{
     
     let collections = data; // Get the results
     return collections.map( (collection) =>{ // Map through the results and for each run the code below
-        var div = document.createElement('div'), //  Create the elements we need
-            img = document.createElement('img'),
-            cardBody = document.createElement('div'),
-            h5 = document.createElement('h5'),
-            p = document.createElement('p'),
-            imgplus = createNode('img');
+        var div = document.createElement("div"), //  Create the elements we need
+            img = document.createElement("img"),
+            cardBody = document.createElement("div"),
+            h5 = document.createElement("h5"),
+            p = document.createElement("p"),
+            imgplus = createNode("img");
 
-            imgplus.className = "remove";
-            imgplus.src = "../../public/fonts/glyphicon-remove-sign.png";
-            imgplus.title = "Remove From Collection";
+        imgplus.className = "remove";
+        imgplus.src = "../../public/fonts/glyphicon-remove-sign.png";
+        imgplus.title = "Remove From Collection";
                            
         div.className = "collection card col-md-2";
         img.className = "card-img-top";
@@ -26,18 +26,18 @@ export const myCollectionView = (data) =>{
         img.src = collection.img;  // Add the source of the image to be the src of the img element
         h5.innerHTML = `${collection.name}`;
         imgplus.id = collection.id;
-        cardBody.appendChild(h5);
-        cardBody.appendChild(p);
-        div.appendChild(img);
-        div.appendChild(cardBody);
-        cardBody.appendChild(imgplus);
+        append(cardBody,h5);
+        append(cardBody,p);
+        append(div,img);
+        append(div,cardBody);
+        append(cardBody,imgplus);
         myCollections.appendChild(div);
         const id = imgplus.id;
         imgplus.onclick = ()=>{
             deleteCollectionService(id);
-        }
+        };
     });
-}
+};
 
 
 let createNode = (element) =>{
